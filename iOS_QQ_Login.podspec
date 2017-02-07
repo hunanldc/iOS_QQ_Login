@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "iOS_QQ_Login"
-s.version          = "0.1.0"
+s.version          = "0.1.1"
 s.summary          = "iOS_QQ_Login is a log tool."
 s.description      = <<-DESC
 iOS_QQ_Login is tool design by vipMobile.
@@ -20,11 +20,13 @@ s.resource_bundles = {
   }
 
 s.vendored_frameworks = 'TencentOpenAPI.framework'
+s.preserve_paths = 'TencentOpenAPI.framework'
 
 s.platform     = :ios, '7.0'
 
 s.requires_arc = true
+# s.xcconfig = {'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/libs/Frameworks/TencentOpenAPI"'}
 
-s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/iOS_QQ_Login/TencentOpenAPI"' }
+# s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/iOS_QQ_Login"', 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Headers/Public/iOS_QQ_Login/TencentOpenAPI"'}
 
 end
